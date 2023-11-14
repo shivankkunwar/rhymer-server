@@ -19,7 +19,7 @@ app.post('/rhyme', async (req, res) => {
   try {
     const response = await openai.completions.create({
       model: 'gpt-3.5-turbo-instruct',
-      prompt:`turn this sentence to Rhyme like a poem like "sky is blue" to "sky is blue and so are you" and keep it concise and short and make sure its  rhyming atleast the last word: ${headline}`,
+      prompt:`turn this sentence to Rhyme like a poem  like "sky is blue" to "sky is blue and so are you" and keep it concise and short (two or three lines only) and make sure its  rhyming atleast the last word: ${headline}`,
       max_tokens: 400,
     temperature: 0, 
       
