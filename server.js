@@ -13,6 +13,9 @@ dotenv.config();
 const OpenAI = require("openai");
 
 const openai = new OpenAI();
+app.get('/',(req, res)=>{
+  res.json("working API");
+})
 app.post('/rhyme', async (req, res) => {
   const headline = req.body.headline;
 
